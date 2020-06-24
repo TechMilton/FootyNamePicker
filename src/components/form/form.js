@@ -26,6 +26,19 @@ const Form = () => {
                 <br />
                 <button type="submit">Add</button>
             </form>
+
+            <div>
+                {names.length === 0 ? null : (
+                    <ul>
+                        {names.map((footballer, index) => (
+                            <li key={index}>
+                                <span>{footballer.name}</span>
+                            </li>
+                        ))}
+                    </ul>
+                )}
+            </div>
+
         </>
     );
 

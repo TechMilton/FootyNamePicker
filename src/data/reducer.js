@@ -10,8 +10,8 @@ export const addName = (state, { value }) => {
     };
 };
 
-//Remove a name from list
-//content will go here
+//Remove name from list
+
 
 
 //export default data
