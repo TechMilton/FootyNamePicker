@@ -6,6 +6,7 @@ export const addName = (state, { value }) => {
         ...state,
         names: [...state.names, {
             name: value.input,
+            color: value.colorInput,
         }],
     };
 };

@@ -52,3 +52,35 @@ body {
 .input-label:after {
   margin: 0 0 0 20px;
 }
+
+/* Color Styling */
+
+.color-blue {
+  width: 20px;
+  height: 20px;
+  background-color: blue;
+  margin: 5px;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+}
+
+.color-red {
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  margin: 5px;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+}
+
+.color-green {
+  width: 20px;
+  height: 20px;
+  background-color: green;
+  margin: 5px;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+}
