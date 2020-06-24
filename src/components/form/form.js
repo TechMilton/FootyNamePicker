@@ -33,6 +33,10 @@ const Form = () => {
                         {names.map((footballer, index) => (
                             <li key={index}>
                                 <span>{footballer.name}</span>
+                                <button
+                                    onClick={() => dispatch({ type: "REMOVE_NAME", index: index })}>
+                                    <i class="fa fa-trash-o" style={{ fontSize: 20 }} />
+                                </button>
                             </li>
                         ))}
                     </ul>
