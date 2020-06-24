@@ -11,12 +11,11 @@ import EnterName from './components/header/enterName';
 
 const App = () => (
   <>
-
-    <Header />
-    <EnterName />
-
-    <Form />
-    {/* <Button /> */}
+    <div class="page-container">
+      <Header />
+      <EnterName />
+      <Form />
+    </div>
   </>
 );
 

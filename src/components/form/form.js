@@ -23,7 +23,6 @@ const Form = () => {
         <>
             <form onSubmit={handleSubmit}>
                 <input className="name-input" onChange={handleInput} value={input} required />
-                <br />
                 <button type="submit">Add</button>
             </form>
 
@@ -42,7 +41,6 @@ const Form = () => {
                     </ul>
                 )}
             </div>
-
         </>
     );
 

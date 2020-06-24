@@ -4,9 +4,7 @@ const EnterName = () => {
 
     return (
         <>
-            <div>
-                <p>Enter a Name</p>
-            </div>
+            <p className="input-label">Enter a Name</p>
         </>
     );
 
