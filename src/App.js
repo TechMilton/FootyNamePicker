@@ -8,13 +8,11 @@ import Form from './components/form/form';
 
 //Header related components 
 import Header from './components/header/header';
-import EnterName from './components/header/enterName';
 
 const App = () => (
   <>
     <div class="page-container">
       <Header />
-      <EnterName />
       <Form />
 
     </div>

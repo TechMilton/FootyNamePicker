@@ -24,7 +24,9 @@ const Form = () => {
         //prevents the page from refreshing on submit
         e.preventDefault();
         setInput("");
+        setColor("");
         dispatch({ type: "ADD_NAME", value: { input, colorInput } });
+        // Reset state after submit
     };
 
     let random = [...names];
@@ -33,9 +35,12 @@ const Form = () => {
 
     return (
         <>
+            <p className="input-label">Pick a Name</p>
             <form onSubmit={handleSubmit}>
                 <input className="name-input" onChange={handleInput} value={input} required />
+
                 <div onChange={handleColor}>
+                    <p className="input-label">Pick a Color</p>
                     <span class="color-blue" ><input className="radio-input" type="radio" value="blue" name="color" /></span>
                     <span class="color-red"><input className="radio-input" type="radio" value="red" name="color" /></span>
                     <span class="color-green"><input className="radio-input" type="radio" value="green" name="color" /></span>
@@ -47,6 +52,7 @@ const Form = () => {
                 </div>
                 <button class="main-btn" type="submit">Add</button>
             </form>
+
             <div>
                 {names.length === 0 ? null : (
                     <ul className="ul-list-names">
@@ -63,7 +69,8 @@ const Form = () => {
                 )}
             </div>
 
-            <button onClick={() => dispatch({ type: "RESET", })}>RESET GAME</button>
+            {/* <button onClick={() => dispatch({ type: "RESET", })}>RESET GAME</button> */}
+
         </>
     );
 
