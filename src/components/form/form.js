@@ -24,13 +24,12 @@ const Form = () => {
         //prevents the page from refreshing on submit
         e.preventDefault();
         setInput("");
-        setColor("");
         dispatch({ type: "ADD_NAME", value: { input, colorInput } });
         // Reset state after submit
     };
 
-    let random = [...names];
-    let average = random.length / 2;
+    let random = [...names]
+    let average = random.length / 2
     let b = random.splice(0, average);
 
     return (
@@ -41,15 +40,32 @@ const Form = () => {
 
                 <div onChange={handleColor}>
                     <p className="input-label">Pick a Color</p>
-                    <span class="color-blue" ><input className="radio-input" type="radio" value="blue" name="color" /></span>
-                    <span class="color-red"><input className="radio-input" type="radio" value="red" name="color" /></span>
-                    <span class="color-green"><input className="radio-input" type="radio" value="green" name="color" /></span>
-                    <span class="color-yellow"><input className="radio-input" type="radio" value="yellow" name="color" /></span>
-                    <span class="color-purple"><input className="radio-input" type="radio" value="purple" name="color" /></span>
-                    <span class="color-brown"><input className="radio-input" type="radio" value="brown" name="color" /></span>
-                    <span class="color-orange"><input className="radio-input" type="radio" value="orange" name="color" /></span>
-                    <span class="color-pink"><input className="radio-input" type="radio" value="pink" name="color" /></span>
+                    <span class="color-blue" >
+                        <input className="radio-input" type="radio" value="blue" name="color" required />
+                    </span>
+                    <span class="color-red">
+                        <input className="radio-input" type="radio" value="red" name="color" required />
+                    </span>
+                    <span class="color-green">
+                        <input className="radio-input" type="radio" value="green" name="color" required />
+                    </span>
+                    <span class="color-yellow">
+                        <input className="radio-input" type="radio" value="yellow" name="color" required />
+                    </span>
+                    <span class="color-purple">
+                        <input className="radio-input" type="radio" value="purple" name="color" required />
+                    </span>
+                    <span class="color-brown">
+                        <input className="radio-input" type="radio" value="brown" name="color" required />
+                    </span>
+                    <span class="color-orange">
+                        <input className="radio-input" type="radio" value="orange" name="color" required />
+                    </span>
+                    <span class="color-pink">
+                        <input className="radio-input" type="radio" value="pink" name="color" required />
+                    </span>
                 </div>
+
                 <button class="main-btn" type="submit">Add</button>
             </form>
 
@@ -69,8 +85,36 @@ const Form = () => {
                 )}
             </div>
 
-            {/* <button onClick={() => dispatch({ type: "RESET", })}>RESET GAME</button> */}
 
+            <div>
+                <div>
+                    {random.length === 0 ? null : (
+                        <ul>
+                            <span>Team A</span>
+                            {random.map((footballer, index) => (
+                                <li key={index}>
+                                    <span style={{ color: footballer.color }}>{footballer.name}</span>
+                                </li>
+                            ))}
+                        </ul>
+                    )}
+                </div>
+
+                <div>
+                    {b.length === 0 ? null : (
+                        <ul>
+                            <span>Team B</span>
+                            {b.map((footballer, index) => (
+                                <li key={index}>
+                                    <span style={{ color: footballer.color }}>{footballer.name}</span>
+                                </li>
+                            ))}
+                        </ul>
+                    )}
+                </div>
+            </div>
+
+            {/* <button onClick={() => dispatch({ type: "RESET", })}>RESET GAME</button> */}
         </>
     );
 

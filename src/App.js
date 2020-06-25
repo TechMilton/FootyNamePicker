@@ -9,14 +9,17 @@ import Form from './components/form/form';
 //Header related components 
 import Header from './components/header/header';
 
-const App = () => (
-  <>
-    <div class="page-container">
-      <Header />
-      <Form />
 
-    </div>
-  </>
-);
+function App() {
+
+  return (
+    <>
+      <div class="page-container">
+        <Header />
+        <Form />
+      </div>
+    </>
+  )
+};
 
 export default App;

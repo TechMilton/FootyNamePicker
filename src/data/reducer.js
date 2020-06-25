@@ -19,7 +19,6 @@ export const removeName = (state, { index }) => {
     };
 };
 
-
 //export default data
 export default (state, action) => {
     switch (action.type) {
