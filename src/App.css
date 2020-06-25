@@ -66,14 +66,14 @@ body {
 
 /* Color Styling */
 
+
+
 .color-blue {
   width: 20px;
   height: 20px;
   background-color: blue;
   margin: 5px;
   border-radius: 50%;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
 }
 
 .color-red {
@@ -82,8 +82,7 @@ body {
   background-color: red;
   margin: 5px;
   border-radius: 50%;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
+
 }
 
 .color-green {
@@ -92,6 +91,45 @@ body {
   background-color: green;
   margin: 5px;
   border-radius: 50%;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
+
+}
+
+.color-yellow {
+  width: 20px;
+  height: 20px;
+  background-color: yellow;
+  margin: 5px;
+  border-radius: 50%;
+}
+
+.color-purple {
+  width: 20px;
+  height: 20px;
+  background-color: purple;
+  margin: 5px;
+  border-radius: 50%;
+}
+
+.color-brown {
+  width: 20px;
+  height: 20px;
+  background-color: brown;
+  margin: 5px;
+  border-radius: 50%;
+}
+
+.color-orange {
+  width: 20px;
+  height: 20px;
+  background-color: orange;
+  margin: 5px;
+  border-radius: 50%;
+}
+
+.color-pink {
+  width: 20px;
+  height: 20px;
+  background-color: pink;
+  margin: 5px;
+  border-radius: 50%;
 }
