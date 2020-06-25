@@ -27,6 +27,10 @@ const Form = () => {
         dispatch({ type: "ADD_NAME", value: { input, colorInput } });
     };
 
+    let random = [...names];
+    let average = random.length / 2;
+    let b = random.splice(0, average);
+
     return (
         <>
             <form onSubmit={handleSubmit}>
@@ -59,9 +63,7 @@ const Form = () => {
                 )}
             </div>
 
-            {/* <button onClick={() => dispatch({ type: "RESET", })}>RESET TEAMS</button> */}
-
-
+            <button onClick={() => dispatch({ type: "RESET", })}>RESET GAME</button>
         </>
     );
 
