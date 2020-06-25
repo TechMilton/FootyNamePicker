@@ -36,14 +36,14 @@ const Form = () => {
                     <span class="color-red"><input type="radio" value="red" name="color" /></span>
                     <span class="color-green"><input type="radio" value="green" name="color" /></span>
                 </div>
-                <button type="submit">Add</button>
+                <button class="main-btn" type="submit">Add</button>
             </form>
             <div>
                 {names.length === 0 ? null : (
                     <ul>
                         {names.map((footballer, index) => (
                             <li key={index}>
-                                <span>{footballer.name}</span>
+                                <span> {footballer.name}</span>
                                 <button
                                     onClick={() => dispatch({ type: "REMOVE_NAME", index: index })}>
                                     x
