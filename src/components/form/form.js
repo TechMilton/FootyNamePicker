@@ -28,6 +28,7 @@ const Form = () => {
         // Reset state after submit
     };
 
+    //This needs to be changed into a recuder 
     let random = [...names]
     let average = random.length / 2
     let b = random.splice(0, average);
@@ -69,6 +70,7 @@ const Form = () => {
                 <button class="main-btn" type="submit">Add</button>
             </form>
 
+            {/* Split into List Compontent */}
             <div>
                 {names.length === 0 ? null : (
                     <ul className="ul-list-names">
@@ -85,12 +87,12 @@ const Form = () => {
                 )}
             </div>
 
-
+            {/* Split into Team A Compontent */}
             <div>
                 <div>
                     {random.length === 0 ? null : (
                         <ul>
-                            <span>Team A</span>
+                            <span>Team "NAME"</span>
                             {random.map((footballer, index) => (
                                 <li key={index}>
                                     <span style={{ color: footballer.color }}>{footballer.name}</span>
@@ -100,10 +102,11 @@ const Form = () => {
                     )}
                 </div>
 
+                {/* Split into Team B Compontent */}
                 <div>
                     {b.length === 0 ? null : (
                         <ul>
-                            <span>Team B</span>
+                            <span>Team "NAME"</span>
                             {b.map((footballer, index) => (
                                 <li key={index}>
                                     <span style={{ color: footballer.color }}>{footballer.name}</span>
@@ -114,6 +117,7 @@ const Form = () => {
                 </div>
             </div>
 
+            {/* Split into Reset Compontent */}
             {/* <button onClick={() => dispatch({ type: "RESET", })}>RESET GAME</button> */}
         </>
     );
