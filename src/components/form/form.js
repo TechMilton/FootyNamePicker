@@ -45,11 +45,11 @@ const Form = () => {
             </form>
             <div>
                 {names.length === 0 ? null : (
-                    <ul>
+                    <ul className="ul-list-names">
                         {names.map((footballer, index) => (
-                            <li key={index}>
+                            <li className="li-list-names" style={{ backgroundImage: footballer.color }} key={index}>
                                 <span> {footballer.name}</span>
-                                <button
+                                <button className="remove-btn"
                                     onClick={() => dispatch({ type: "REMOVE_NAME", index: index })}>
                                     x
                                 </button>
@@ -59,7 +59,7 @@ const Form = () => {
                 )}
             </div>
 
-            {/* <button onClick={() => dispatch({ type: "RESET", })}>RESET GAME</button> */}
+            {/* <button onClick={() => dispatch({ type: "RESET", })}>RESET TEAMS</button> */}
 
 
         </>
