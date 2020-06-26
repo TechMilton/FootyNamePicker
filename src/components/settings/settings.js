@@ -29,31 +29,34 @@ const Settings = (props) => {
 
     return (
         <>
-            <form onSubmit={handleSubmit}>
-                <label>Enter First Team Name:</label>
+            <form className="settings-page" onSubmit={handleSubmit}>
+                <label className="input-label">First Team Name:</label>
                 <input
+                    className="settings-input"
                     type="text"
                     onChange={handleTeamOne}
                     value={teamOne}
                 >
                 </input>
 
-                <label>Enter Second Team Name:</label>
+                <label className="input-label">Second Team Name:</label>
                 <input
+                    className="settings-input"
                     type="text"
                     onChange={handleTeamTwo}
                     value={teamTwo}
                 >
                 </input>
 
-                <label>How Many people are playing?( 4 - 10)</label>
+                <label className="input-label">Number of Players</label>
                 <input
+                    className="settings-input"
                     type="number"
                     placeholder="4"
                     min="4"
                     max="10">
                 </input>
-                <button>Start</button>
+                <button className="main-btn">Start</button>
             </form>
         </>
     )

@@ -19,9 +19,6 @@ import Settings from './components/settings/settings';
 
 function App() {
 
-  const [teamOne, setTeamOne] = useState("");
-
-
   return (
     <Router>
 
