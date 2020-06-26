@@ -8,7 +8,7 @@ const Form = (props) => {
     const [colorInput, setColor] = useState("");
 
     // use the reducer
-    const [{ names, teamOne, teamTwo }, dispatch] = useReducer(reducer, initialState);
+    const [{ names, teamA, teamB }, dispatch] = useReducer(reducer, initialState);
 
 
     // update name input state
@@ -93,7 +93,7 @@ const Form = (props) => {
                 <div>
                     {random.length === 0 ? null : (
                         <ul>
-                            <span>Team One</span>
+                            <span>{teamA}</span>
                             {random.map((footballer, index) => (
                                 <li key={index}>
                                     <span style={{ color: footballer.color }}>{footballer.name}</span>
@@ -107,7 +107,7 @@ const Form = (props) => {
                 <div>
                     {b.length === 0 ? null : (
                         <ul>
-                            <span>Team Two</span>
+                            <span>{teamB}</span>
                             {b.map((footballer, index) => (
                                 <li key={index}>
                                     <span style={{ color: footballer.color }}>{footballer.name}</span>

@@ -11,17 +11,16 @@ import {
 
 //Form related components
 import Form from './components/form/form';
-// import Button from './components/form/button';
 
 //Header related components 
 import Header from './components/header/header';
-
 import Settings from './components/settings/settings';
 
 
 function App() {
 
   const [teamOne, setTeamOne] = useState("");
+
 
   return (
     <Router>
@@ -37,10 +36,11 @@ function App() {
       </Switch>
 
       <Route path="/Settings">
-        <Settings
-          onChange={(value) => setTeamOne(value)}
-        />
-        <h1>{teamOne}</h1>
+        <p><Link to="/">Link to Home</Link></p>
+        <div className="page-container">
+          <Header />
+          <Settings />
+        </div>
       </Route>
 
 

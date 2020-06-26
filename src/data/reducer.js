@@ -14,14 +14,14 @@ export const addName = (state, { value }) => {
 export const addTeamOne = (state, { value }) => {
     return {
         ...state,
-        teamOne: value.teamOne,
+        teamA: value.teamOne,
     };
 }
 
 export const addTeamTwo = (state, { value }) => {
     return {
         ...state,
-        teamTwo: value.teamTwo,
+        teamB: value.teamTwo,
     };
 }
 
