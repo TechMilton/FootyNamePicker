@@ -2,13 +2,14 @@ import React, { useState, useReducer } from "react";
 import initialState from '../../data/initialState';
 import reducer from '../../data/reducer';
 
-const Form = () => {
+const Form = (props) => {
     //keep track of input value
     const [input, setInput] = useState("");
     const [colorInput, setColor] = useState("");
 
     // use the reducer
-    const [{ names }, dispatch] = useReducer(reducer, initialState);
+    const [{ names, teamOne, teamTwo }, dispatch] = useReducer(reducer, initialState);
+
 
     // update name input state
     const handleInput = (e) => {
@@ -92,7 +93,7 @@ const Form = () => {
                 <div>
                     {random.length === 0 ? null : (
                         <ul>
-                            <span>Team "NAME"</span>
+                            <span>Team One</span>
                             {random.map((footballer, index) => (
                                 <li key={index}>
                                     <span style={{ color: footballer.color }}>{footballer.name}</span>
@@ -106,7 +107,7 @@ const Form = () => {
                 <div>
                     {b.length === 0 ? null : (
                         <ul>
-                            <span>Team "NAME"</span>
+                            <span>Team Two</span>
                             {b.map((footballer, index) => (
                                 <li key={index}>
                                     <span style={{ color: footballer.color }}>{footballer.name}</span>
