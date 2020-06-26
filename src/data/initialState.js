@@ -3,7 +3,7 @@ const initialState = {
     color: "",
     teamOne: "",
     teamTwo: "",
-    people: "",
+    count: 4,
 };
 
 export default initialState;

@@ -11,17 +11,27 @@ export const addName = (state, { value }) => {
     };
 };
 
+//Add Team One Name -- Settings Page
 export const addTeamOne = (state, { value }) => {
     return {
         ...state,
-        teamA: value.teamOne,
+        teamOne: value.teamOne,
     };
 }
 
+//Add Team Two Name -- Settings Page
 export const addTeamTwo = (state, { value }) => {
     return {
         ...state,
-        teamB: value.teamTwo,
+        teamTwo: value.teamTwo,
+    };
+}
+
+//Add player counter -- Settings Page
+export const addCount = (state, { value }) => {
+    return {
+        ...state,
+        count: value.count,
     };
 }
 
@@ -40,6 +50,7 @@ export default (state, action) => {
         case "REMOVE_NAME": return removeName(state, action);
         case "TEAM_ONE": return addTeamOne(state, action);
         case "TEAM_TWO": return addTeamTwo(state, action);
+        case "COUNT": return addCount(state, action);
         case "RESET": return initialState;
         default: return state;
     };

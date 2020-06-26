@@ -2,10 +2,11 @@ import React, { useState, useReducer } from "react";
 import initialState from '../../data/initialState';
 import reducer from '../../data/reducer';
 
-const Settings = (props) => {
+const Settings = () => {
 
     const [teamOne, setTeamOne] = useState("");
     const [teamTwo, setTeamTwo] = useState("");
+    const [count, setCount] = useState(4);
 
     const [{ }, dispatch] = useReducer(reducer, initialState);
 
@@ -17,6 +18,10 @@ const Settings = (props) => {
         setTeamTwo(e.target.value);
     };
 
+    const handleCount = (e) => {
+        setCount(e.target.value);
+    }
+
 
     const handleSubmit = (e) => {
         //prevents the page from refreshing on submit
@@ -25,11 +30,12 @@ const Settings = (props) => {
         setTeamTwo("");
         dispatch({ type: "TEAM_ONE", value: { teamOne } });
         dispatch({ type: "TEAM_TWO", value: { teamTwo } });
+        dispatch({ type: "COUNT", value: { count } });
     };
 
     return (
         <>
-            <form className="settings-page" onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit}>
                 <label className="input-label">First Team Name:</label>
                 <input
                     className="settings-input"
@@ -43,20 +49,18 @@ const Settings = (props) => {
                 <input
                     className="settings-input"
                     type="text"
-                    onChange={handleTeamTwo}
+                    onChange={() => setTeamTwo(teamTwo)}
                     value={teamTwo}
+
                 >
                 </input>
 
                 <label className="input-label">Number of Players</label>
-                <input
-                    className="settings-input"
-                    type="number"
-                    placeholder="4"
-                    min="4"
-                    max="10">
-                </input>
-                <button className="main-btn">Start</button>
+                <p onChange={handleCount}>{count} Players</p>
+                <button onClick={() => setCount(count + 1)} >+</button>
+                <button onClick={() => setCount(count - 1)} >-</button>
+
+                <button className="settings-btn">Start</button>
             </form>
         </>
     )
