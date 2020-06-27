@@ -26,6 +26,7 @@ const Form = (props) => {
         setInput("");
         dispatch({ type: "ADD_NAME", value: { input, colorInput } });
         // Reset state after submit
+        dispatch({ type: "SHUFFLE" });
     };
 
     return (

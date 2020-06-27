@@ -35,6 +35,25 @@ export const addCount = (state, { value }) => {
     };
 }
 
+export const shuffleTeam = (state) => {
+    const names = state.names;
+    const teamOneNames = [];
+    const teamTwoNames = [];
+
+    for (let i = 0; i < names.length; i++) {
+        if (Math.random() <= 0.5) {
+            teamOneNames.push(names[i]);
+        } else {
+            teamTwoNames.push(names[i]);
+        }
+    }
+    return {
+        ...state,
+        teamOneNames: teamOneNames,
+        teamTwoNames: teamTwoNames,
+    };
+}
+
 //Remove name from list
 export const removeName = (state, { index }) => {
     return {
@@ -50,6 +69,7 @@ export default (state, action) => {
         case "REMOVE_NAME": return removeName(state, action);
         case "TEAM_ONE": return addTeamOne(state, action);
         case "TEAM_TWO": return addTeamTwo(state, action);
+        case "SHUFFLE": return shuffleTeam(state);
         case "COUNT": return addCount(state, action);
         case "RESET": return initialState;
         default: return state;

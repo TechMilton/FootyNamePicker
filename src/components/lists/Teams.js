@@ -5,22 +5,26 @@ import { AppContext } from "../../App";
 const Teams = () => {
 
     const { state: { names } } = useContext(AppContext);
+
     const { state: { teamOne } } = useContext(AppContext);
     const { state: { teamTwo } } = useContext(AppContext);
 
+    const { state: { teamOneNames } } = useContext(AppContext);
+    const { state: { teamTwoNames } } = useContext(AppContext);
 
-    let random = [...names]
-    let average = random.length / 2
-    let b = random.splice(0, average);
+    const { state: { count } } = useContext(AppContext);
+
+    if (names.length < count) {
+        return null;
+    }
 
     return (
         <>
             <table className="teams-table">
                 <th className="teams-table-title">Team {teamOne}</th>
-                {random.length === 0 ? null : (
+                {teamOneNames.length === 0 ? null : (
                     <tr >
-
-                        {random.map((footballer, index) => (
+                        {teamOneNames.map((footballer, index) => (
                             <td className="tr-list-teams" key={index}>
                                 <span style={{ color: footballer.color }}>{footballer.name}</span>
                             </td>
@@ -31,10 +35,9 @@ const Teams = () => {
 
             <table>
                 <th className="teams-table-title">Team {teamTwo}</th>
-                {b.length === 0 ? null : (
+                {teamTwoNames.length === 0 ? null : (
                     <tr >
-
-                        {b.map((footballer, index) => (
+                        {teamTwoNames.map((footballer, index) => (
                             <td className="tr-list-teams" key={index}>
                                 <span style={{ color: footballer.color }}>{footballer.name}</span>
                             </td>
