@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { AppContext } from "../../App";
-import Shirt from "../../imgs/shirt.svg"
+import Shirt from "../../imgs/Shirt";
 
 
 const Teams = () => {
@@ -28,7 +28,7 @@ const Teams = () => {
                         {teamOneNames.map((footballer, index) => (
                             <td className="tr-list-teams" key={index}>
                                 <span>{footballer.name}</span>
-                                <span><img className="football-shirt" src={Shirt} alt="FootBall Shirt"></img></span>
+                                <Shirt fill={footballer.color} />
                             </td>
                         ))}
                     </tr>
@@ -42,7 +42,7 @@ const Teams = () => {
                         {teamTwoNames.map((footballer, index) => (
                             <td className="tr-list-teams" key={index}>
                                 <span>{footballer.name}</span>
-                                <span><img className="football-shirt" src={Shirt} alt="FootBall Shirt"></img></span>
+                                <Shirt fill={footballer.color} />
                             </td>
                         ))}
                     </tr>

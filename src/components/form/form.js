@@ -63,9 +63,8 @@ const Form = (props) => {
                     </li>
                 </ul>
 
-                <button class="main-btn" type="submit">Add</button>
+                <button className="main-btn" type="submit">Add</button>
             </form>
-
         </>
     );
 
