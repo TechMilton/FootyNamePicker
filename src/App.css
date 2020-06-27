@@ -62,11 +62,6 @@ body {
 
 /* Button Styling */
 
-.remove-btn {
-  color: rgb(0, 0, 0);
-  margin-left: 10px;
-}
-
 .main-btn {
   font-size: 1em;
   font-weight: bold;
@@ -146,14 +141,29 @@ body {
   border-radius: 50%;
 }
 
-.ul-list-names {
-  padding: 0;
-  max-width: 300px;
+/* Table Name List Stayling */
+
+
+.remove-btn {
+  color: rgb(0, 0, 0);
 }
 
-.li-list-names {
+.names-table-title {
+  display: flex;
+  border-bottom: 2px solid lightgrey;
+}
+
+.tr-list-names {
+  padding: 0;
+  max-width: 300px;
+  margin: 10px;
+
+}
+
+.td-list-names {
   display: flex;
   align-items: center;
+  border-bottom: 2px solid #DDD;
 }
 
 /*Settings Page */
@@ -194,9 +204,6 @@ body {
   background-color: #333;
 }
 
-.form-count {
-  text-decoration: initial;
-}
 
 .list-name {
   display: flex;

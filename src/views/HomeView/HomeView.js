@@ -8,6 +8,7 @@ import { appUrls } from '../../urls';
 import ListName from '../../components/lists/NameLists';
 import Teams from '../../components/lists/Teams';
 
+
 const HomeView = () => (
     <>
         <Link to={appUrls.SETTINGS}>Game Settings</Link>

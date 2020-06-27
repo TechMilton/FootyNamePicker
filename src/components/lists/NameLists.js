@@ -5,22 +5,25 @@ const NameList = () => {
     const { state: { names }, dispatch } = useContext(AppContext);
 
     return (
-        <div>
-            <h3>Names:</h3>
+        <table className="names-table">
+            <th className="names-table-title">Footballers:</th>
             {names.length === 0 ? null : (
-                <ul className="ul-list-names">
+                <tr className="tr-list-names">
                     {names.map((footballer, index) => (
-                        <li className="li-list-names" style={{ backgroundImage: footballer.color }} key={index}>
-                            <span> {footballer.name}</span>
-                            <button className="remove-btn"
-                                onClick={() => dispatch({ type: "REMOVE_NAME", index: index })}>
-                                x
+                        <td className="td-list-names" style={{ backgroundImage: footballer.color }} key={index}>
+                            <td> {footballer.name}</td>
+                            <tr className="tr-list-names">
+                                <button className="remove-btn"
+                                    onClick={() => dispatch({ type: "REMOVE_NAME", index: index })}>
+                                    x
                                 </button>
-                        </li>
+                            </tr>
+
+                        </td>
                     ))}
-                </ul>
+                </tr>
             )}
-        </div>
+        </table>
     )
 }
 
