@@ -1,6 +1,6 @@
 import React, { useState, useReducer } from "react";
-import initialState from '../../data/initialState';
-import reducer from '../../data/reducer';
+import initialState from '../../store/initialState';
+import reducer from '../../store/reducer';
 
 const Form = (props) => {
     //keep track of input value

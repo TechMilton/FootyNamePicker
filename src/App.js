@@ -1,49 +1,39 @@
-import React, { useState } from 'react';
-import './App.css';
+import React, { useReducer } from 'react';
 
 // import the ReactRouter components
 import {
   BrowserRouter as Router,
   Route,
   Switch,
-  Link,
 } from "react-router-dom";
 
-//Form related components
-import Form from './components/form/form';
+import './App.css';
 
-//Header related components 
-import Header from './components/header/header';
-import Settings from './components/settings/settings';
+import HomeView from './views/HomeView/HomeView';
+import SettingsView from './views/SettingsView/SettingsView';
+import reducer from './store/reducer';
+import initialState from './store/initialState';
 
+import { appUrls } from './urls';
 
-function App() {
+// Creating a context through which we will be able to access global state
+export const AppContext = React.createContext({});
+
+const App = () => {
+
+  let [state, dispatch] = useReducer(reducer, initialState);
+  let value = { state, dispatch };
 
   return (
-    <Router>
-
-      <Switch>
-        <Route exact path="/">
-          <p><Link to="/settings">Game Settings</Link></p>
-          <div className="page-container">
-            <Header />
-            <Form />
-          </div>
-        </Route>
-      </Switch>
-
-      <Route path="/Settings">
-        <p><Link to="/">Link to Home</Link></p>
-        <div className="page-container">
-          <Header />
-          <Settings />
-        </div>
-      </Route>
-
-
-
-    </Router>
-  )
+    <AppContext.Provider value={value}>
+      <Router>
+        <Switch>
+          <Route exact path={appUrls.HOME} component={HomeView} />
+          <Route path={appUrls.SETTINGS} component={SettingsView} />
+        </Switch>
+      </Router>
+    </AppContext.Provider>
+  );
 };
 
 export default App;

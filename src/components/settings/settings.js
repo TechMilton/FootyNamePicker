@@ -1,6 +1,6 @@
 import React, { useState, useReducer } from "react";
-import initialState from '../../data/initialState';
-import reducer from '../../data/reducer';
+import initialState from '../../store/initialState';
+import reducer from '../../store/reducer';
 
 const Settings = () => {
 
@@ -66,6 +66,5 @@ const Settings = () => {
     )
 
 }
-
 
 export default Settings;
