@@ -7,18 +7,13 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  color: black;
   margin-top: 100px;
   text-align: center;
 }
 
 /* Header Styling */
 .page-header__the {
-  background-color: black;
-  background-clip: text;
-  font-weight: bolder;
-  -webkit-text-fill-color: transparent;
+  color: black;
   font-size: 35px;
   margin: 0;
 }
@@ -29,7 +24,6 @@ body {
   -webkit-text-fill-color: transparent;
   font-size: 60px;
   margin: 0;
-  font-weight: bolder;
 }
 
 /* Form Styling */
@@ -44,7 +38,6 @@ body {
   display: flex;
   align-items: center;
   margin: 10px 0px 10px 0px;
-  font-weight: 500;
   width: 500px;
 }
 
@@ -80,9 +73,7 @@ body {
 }
 
 .color-list {
-  list-style: none;
   padding: 10px;
-  position: static;
 }
 
 .color-blue {
