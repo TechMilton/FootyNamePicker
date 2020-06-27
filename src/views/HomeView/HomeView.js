@@ -7,11 +7,15 @@ import { appUrls } from '../../urls';
 
 import ListName from '../../components/lists/NameLists';
 import Teams from '../../components/lists/Teams';
+import Reset from '../../components/reset/reset';
 
 
 const HomeView = () => (
     <>
-        <Link to={appUrls.SETTINGS}>Game Settings</Link>
+        <div className="main-nav-bar">
+            <Link to={appUrls.SETTINGS}>Game Settings</Link>
+            <Reset />
+        </div>
         <div className="page-container">
             <Header />
             <Form />
