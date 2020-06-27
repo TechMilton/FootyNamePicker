@@ -1,14 +1,14 @@
-import React, { useState, useReducer } from "react";
-import initialState from '../../store/initialState';
-import reducer from '../../store/reducer';
+import React, { useState, useContext } from "react";
+import { AppContext } from "../../App";
 
 const Settings = () => {
+
+    //initialize context (so that you can reach the data)
+    const { dispatch } = useContext(AppContext);
 
     const [teamOne, setTeamOne] = useState("");
     const [teamTwo, setTeamTwo] = useState("");
     const [count, setCount] = useState(4);
-
-    const [{ }, dispatch] = useReducer(reducer, initialState);
 
     const handleTeamOne = (e) => {
         setTeamOne(e.target.value);
@@ -42,25 +42,23 @@ const Settings = () => {
                     type="text"
                     onChange={handleTeamOne}
                     value={teamOne}
-                >
-                </input>
+                />
 
                 <label className="input-label">Second Team Name:</label>
                 <input
                     className="settings-input"
                     type="text"
-                    onChange={() => setTeamTwo(teamTwo)}
+                    onChange={handleTeamTwo}
                     value={teamTwo}
-
-                >
-                </input>
-
-                <label className="input-label">Number of Players</label>
-                <p onChange={handleCount}>{count} Players</p>
-                <button onClick={() => setCount(count + 1)} >+</button>
-                <button onClick={() => setCount(count - 1)} >-</button>
-
-                <button className="settings-btn">Start</button>
+                />
+                <div className="counter">
+                    <label className="input-label">Number of Players</label>
+                    <p className="counter-display" onChange={handleCount}>{count} Players</p>
+                    <button className="counter-btn" type="button" onClick={() => setCount(count + 1)} >+</button>
+                    <button className="counter-btn" type="button" onClick={() => setCount(count - 1)} >-</button>
+                </div>
+                <label className="input-label">Submit</label>
+                <button type="submit" className="settings-btn">Start</button>
             </form>
         </>
     )

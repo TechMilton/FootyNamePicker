@@ -16,7 +16,7 @@ const Teams = () => {
     return (
         <>
             <div>
-                <h3>{teamOne}</h3>
+                <h3>Team {teamOne}</h3>
                 {random.length === 0 ? null : (
                     <ul className="ul-list-names">
 
@@ -30,7 +30,7 @@ const Teams = () => {
             </div>
 
             <div>
-                <h3>{teamTwo}</h3>
+                <h3>Team {teamTwo}</h3>
                 {b.length === 0 ? null : (
                     <ul className="ul-list-names">
 

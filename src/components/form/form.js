@@ -4,7 +4,7 @@ import { AppContext } from "../../App";
 const Form = (props) => {
 
     //initialize context (so that you can reach the data)
-    const { state: { names }, dispatch } = useContext(AppContext);
+    const { state: { count }, dispatch } = useContext(AppContext);
 
     //keep track of input value
     const [input, setInput] = useState("");
@@ -30,12 +30,13 @@ const Form = (props) => {
 
     return (
         <>
-            <p className="input-label">Pick a Name</p>
+            <p className="input-label">Players Name:</p>
+            <p>After <span className="form-count">{count} names</span>, your teams will be randomly be generated</p>
             <form onSubmit={handleSubmit}>
                 <input className="name-input" onChange={handleInput} value={input} required />
 
                 <div onChange={handleColor}>
-                    <p className="input-label">Pick a Color</p>
+                    <p className="input-label">Pick a Color:</p>
                     <span class="color-blue" >
                         <input className="radio-input" type="radio" value="blue" name="color" required />
                     </span>
