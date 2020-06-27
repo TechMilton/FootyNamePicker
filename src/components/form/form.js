@@ -31,12 +31,12 @@ const Form = (props) => {
     return (
         <>
             <p className="input-label">Players Name:</p>
-            <p>After <span className="form-count">{count} names</span>, your teams will be randomly be generated</p>
+            <p>After <i style={{ fontWeight: "bold" }}>{count} names</i>, your teams will be randomly be generated</p>
             <form onSubmit={handleSubmit}>
                 <input className="name-input" onChange={handleInput} value={input} required />
 
                 <div onChange={handleColor}>
-                    <p className="input-label">Pick a Color:</p>
+                    <p className="input-label">Players Color:</p>
                     <span class="color-blue" >
                         <input className="radio-input" type="radio" value="blue" name="color" required />
                     </span>
