@@ -8,7 +8,7 @@ const Teams = () => {
     const { state: { teamOne } } = useContext(AppContext);
     const { state: { teamTwo } } = useContext(AppContext);
 
-    //Will move this to a reducer
+
     let random = [...names]
     let average = random.length / 2
     let b = random.splice(0, average);

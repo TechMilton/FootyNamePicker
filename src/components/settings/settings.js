@@ -51,7 +51,6 @@ const Settings = () => {
                     type="text"
                     onChange={handleTeamTwo}
                     value={teamTwo}
-                    required
                 />
                 <div className="counter">
                     <label className="input-label">Number of Players:</label>

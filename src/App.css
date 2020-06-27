@@ -75,12 +75,30 @@ body {
 /* Color Styling */
 
 
+.color-list {
+  list-style: none;
+  padding: 0;
+}
+
 .color-blue {
   width: 20px;
   height: 20px;
   background-color: blue;
   margin: 5px;
-  border-radius: 50%;
+  border-radius: 100%;
+  display: inline-block;
+  transition: transform 0.3s;
+}
+
+.color-blue:not(.active):hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.color-blue.active {
+  border: 5px solid #ddd;
+  width: 32px;
+  height: 32px;
 }
 
 .color-red {
@@ -88,8 +106,20 @@ body {
   height: 20px;
   background-color: red;
   margin: 5px;
-  border-radius: 50%;
+  border-radius: 100%;
+  display: inline-block;
+  transition: transform 0.3s;
+}
 
+.color-red:not(.active):hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.color-red.active {
+  border: 5px solid #ddd;
+  width: 32px;
+  height: 32px;
 }
 
 .color-green {
@@ -97,8 +127,20 @@ body {
   height: 20px;
   background-color: green;
   margin: 5px;
-  border-radius: 50%;
+  border-radius: 100%;
+  display: inline-block;
+  transition: transform 0.3s;
+}
 
+.color-green:not(.active):hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.color-green.active {
+  border: 5px solid #ddd;
+  width: 32px;
+  height: 32px;
 }
 
 .color-yellow {
@@ -106,7 +148,20 @@ body {
   height: 20px;
   background-color: yellow;
   margin: 5px;
-  border-radius: 50%;
+  border-radius: 100%;
+  display: inline-block;
+  transition: transform 0.3s;
+}
+
+.color-yellow:not(.active):hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.color-yellow.active {
+  border: 5px solid #ddd;
+  width: 32px;
+  height: 32px;
 }
 
 .color-purple {
@@ -114,7 +169,20 @@ body {
   height: 20px;
   background-color: purple;
   margin: 5px;
-  border-radius: 50%;
+  border-radius: 100%;
+  display: inline-block;
+  transition: transform 0.3s;
+}
+
+.color-purple:not(.active):hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.color-purple.active {
+  border: 5px solid #ddd;
+  width: 32px;
+  height: 32px;
 }
 
 .color-brown {
@@ -122,7 +190,20 @@ body {
   height: 20px;
   background-color: brown;
   margin: 5px;
-  border-radius: 50%;
+  border-radius: 100%;
+  display: inline-block;
+  transition: transform 0.3s;
+}
+
+.color-brown:not(.active):hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.color-brown.active {
+  border: 5px solid #ddd;
+  width: 32px;
+  height: 32px;
 }
 
 .color-orange {
@@ -130,7 +211,20 @@ body {
   height: 20px;
   background-color: orange;
   margin: 5px;
-  border-radius: 50%;
+  border-radius: 100%;
+  display: inline-block;
+  transition: transform 0.3s;
+}
+
+.color-orange:not(.active):hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.color-orange.active {
+  border: 5px solid #ddd;
+  width: 32px;
+  height: 32px;
 }
 
 .color-pink {
@@ -138,7 +232,20 @@ body {
   height: 20px;
   background-color: pink;
   margin: 5px;
-  border-radius: 50%;
+  border-radius: 100%;
+  display: inline-block;
+  transition: transform 0.3s;
+}
+
+.color-pink:not(.active):hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.color-pink.active {
+  border: 5px solid #ddd;
+  width: 32px;
+  height: 32px;
 }
 
 /* Names Table Stayling */

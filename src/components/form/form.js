@@ -34,41 +34,21 @@ const Form = (props) => {
             <p>After <i style={{ fontWeight: "bold" }}>{count} names</i>, your teams will be randomly be generated</p>
             <form onSubmit={handleSubmit}>
                 <input className="name-input" onChange={handleInput} value={input} required />
-
-                <div onChange={handleColor}>
-                    <p className="input-label">Players Color:</p>
-                    <span class="color-blue" >
-                        <input className="radio-input" type="radio" value="blue" name="color" required />
-                    </span>
-                    <span class="color-red">
-                        <input className="radio-input" type="radio" value="red" name="color" required />
-                    </span>
-                    <span class="color-green">
-                        <input className="radio-input" type="radio" value="green" name="color" required />
-                    </span>
-                    <span class="color-yellow">
-                        <input className="radio-input" type="radio" value="yellow" name="color" required />
-                    </span>
-                    <span class="color-purple">
-                        <input className="radio-input" type="radio" value="purple" name="color" required />
-                    </span>
-                    <span class="color-brown">
-                        <input className="radio-input" type="radio" value="brown" name="color" required />
-                    </span>
-                    <span class="color-orange">
-                        <input className="radio-input" type="radio" value="orange" name="color" required />
-                    </span>
-                    <span class="color-pink">
-                        <input className="radio-input" type="radio" value="pink" name="color" required />
-                    </span>
-                </div>
+                <p className="input-label">Players Color:</p>
+                <ul className="color-list" onChange={handleColor}>
+                    <li className="color-blue" name="color" value="blue" />
+                    <li className="color-red" name="color" value="red" />
+                    <li className="color-green" name="color" value="green" />
+                    <li className="color-yellow" name="color" value="yellow" />
+                    <li className="color-purple" name="color" value="purple" />
+                    <li className="color-brown" name="color" value="brown" />
+                    <li className="color-orange" name="color" value="orange" />
+                    <li className="color-pink" name="color" value="pink" />
+                </ul>
 
                 <button class="main-btn" type="submit">Add</button>
             </form>
 
-            {/* Split into Reset Compontent */}
-            {/* <button onClick={() => dispatch({ type: "RESET", })}>RESET GAME</button> */}
-            {/* style={{ color: footballer.color}} */}
         </>
     );
 
