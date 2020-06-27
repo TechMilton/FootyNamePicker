@@ -1,15 +1,14 @@
-import React, { useState, useReducer } from "react";
-import initialState from '../../store/initialState';
-import reducer from '../../store/reducer';
+import React, { useState, useContext } from "react";
+import { AppContext } from "../../App";
 
 const Form = (props) => {
+
+    //initialize context (so that you can reach the data)
+    const { state: { names }, dispatch } = useContext(AppContext);
+
     //keep track of input value
     const [input, setInput] = useState("");
     const [colorInput, setColor] = useState("");
-
-    // use the reducer
-    const [{ names }, dispatch] = useReducer(reducer, initialState);
-
 
     // update name input state
     const handleInput = (e) => {
@@ -28,11 +27,6 @@ const Form = (props) => {
         dispatch({ type: "ADD_NAME", value: { input, colorInput } });
         // Reset state after submit
     };
-
-    //This needs to be changed into a recuder 
-    let random = [...names]
-    let average = random.length / 2
-    let b = random.splice(0, average);
 
     return (
         <>
@@ -71,55 +65,9 @@ const Form = (props) => {
                 <button class="main-btn" type="submit">Add</button>
             </form>
 
-            {/* Split into List Compontent */}
-            <div>
-                {names.length === 0 ? null : (
-                    <ul className="ul-list-names">
-                        {names.map((footballer, index) => (
-                            <li className="li-list-names" style={{ backgroundImage: footballer.color }} key={index}>
-                                <span> {footballer.name}</span>
-                                <button className="remove-btn"
-                                    onClick={() => dispatch({ type: "REMOVE_NAME", index: index })}>
-                                    x
-                                </button>
-                            </li>
-                        ))}
-                    </ul>
-                )}
-            </div>
-
-            {/* Split into Team A Compontent */}
-            <div>
-                <div>
-                    {random.length === 0 ? null : (
-                        <ul className="ul-list-names">
-                            <span>Team One</span>
-                            {random.map((footballer, index) => (
-                                <li className="li-list-names" key={index}>
-                                    <span style={{ color: footballer.color }}>{footballer.name}</span>
-                                </li>
-                            ))}
-                        </ul>
-                    )}
-                </div>
-
-                {/* Split into Team B Compontent */}
-                <div>
-                    {b.length === 0 ? null : (
-                        <ul className="ul-list-names">
-                            <span>Team Two</span>
-                            {b.map((footballer, index) => (
-                                <li className="li-list-names" key={index}>
-                                    <span style={{ color: footballer.color }}>{footballer.name}</span>
-                                </li>
-                            ))}
-                        </ul>
-                    )}
-                </div>
-            </div>
-
             {/* Split into Reset Compontent */}
             {/* <button onClick={() => dispatch({ type: "RESET", })}>RESET GAME</button> */}
+            {/* style={{ color: footballer.color}} */}
         </>
     );
 
@@ -127,5 +75,3 @@ const Form = (props) => {
 
 export default Form;
 
-
-//style={{ color: footballer.color}}

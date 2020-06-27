@@ -5,6 +5,9 @@ import Header from '../../components/header/Header';
 import Form from '../../components/form/Form';
 import { appUrls } from '../../urls';
 
+import ListName from '../../components/lists/NameLists';
+import Teams from '../../components/lists/Teams';
+
 const HomeView = () => (
     <>
         <Link to={appUrls.SETTINGS}>Game Settings</Link>
@@ -13,8 +16,10 @@ const HomeView = () => (
             <Form />
         </div>
         <div className="list-name">
+            <ListName />
         </div>
         <div className="list-teams">
+            <Teams />
         </div>
     </>
 );
