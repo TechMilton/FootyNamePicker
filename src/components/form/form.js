@@ -36,14 +36,30 @@ const Form = (props) => {
                 <input className="name-input" onChange={handleInput} value={input} required />
                 <p className="input-label">Players Color:</p>
                 <ul className="color-list" onChange={handleColor}>
-                    <li className="color-blue" name="color" value="blue" />
-                    <li className="color-red" name="color" value="red" />
-                    <li className="color-green" name="color" value="green" />
-                    <li className="color-yellow" name="color" value="yellow" />
-                    <li className="color-purple" name="color" value="purple" />
-                    <li className="color-brown" name="color" value="brown" />
-                    <li className="color-orange" name="color" value="orange" />
-                    <li className="color-pink" name="color" value="pink" />
+                    <li className="color-blue">
+                        <input className="color-radio" type="radio" value="blue" name="color" required />
+                    </li>
+                    <li className="color-red" name="color" value="red">
+                        <input className="color-radio" type="radio" value="red" name="color" required />
+                    </li>
+                    <li className="color-green" name="color" value="green">
+                        <input className="color-radio" type="radio" value="green" name="color" required />
+                    </li>
+                    <li className="color-yellow" name="color" value="yellow">
+                        <input className="color-radio" type="radio" value="yellow" name="color" required />
+                    </li>
+                    <li className="color-purple" name="color" value="purple">
+                        <input className="color-radio" type="radio" value="purple" name="color" required />
+                    </li>
+                    <li className="color-brown" name="color" value="brown">
+                        <input className="color-radio" type="radio" value="brown" name="color" required />
+                    </li>
+                    <li className="color-orange" name="color" value="orange">
+                        <input className="color-radio" type="radio" value="orange" name="color" required />
+                    </li>
+                    <li className="color-pink" name="color" value="pink">
+                        <input className="color-radio" type="radio" value="pink" name="color" required />
+                    </li>
                 </ul>
 
                 <button class="main-btn" type="submit">Add</button>

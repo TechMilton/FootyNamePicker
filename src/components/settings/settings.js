@@ -36,7 +36,7 @@ const Settings = () => {
     return (
         <>
             <form onSubmit={handleSubmit}>
-                <label className="input-label">First Team Name:</label>
+                <label className="input-label">First Team Captain:</label>
                 <input
                     className="settings-input"
                     type="text"
@@ -45,7 +45,7 @@ const Settings = () => {
                     required
                 />
 
-                <label className="input-label">Second Team Name:</label>
+                <label className="input-label">Second Team Captain:</label>
                 <input
                     className="settings-input"
                     type="text"
