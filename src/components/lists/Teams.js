@@ -15,33 +15,33 @@ const Teams = () => {
 
     return (
         <>
-            <div>
-                <h3>Team {teamOne}</h3>
+            <table className="teams-table">
+                <th className="teams-table-title">Team {teamOne}</th>
                 {random.length === 0 ? null : (
-                    <ul className="ul-list-names">
+                    <tr >
 
                         {random.map((footballer, index) => (
-                            <li className="li-list-names" key={index}>
+                            <td className="tr-list-teams" key={index}>
                                 <span style={{ color: footballer.color }}>{footballer.name}</span>
-                            </li>
+                            </td>
                         ))}
-                    </ul>
+                    </tr>
                 )}
-            </div>
+            </table>
 
-            <div>
-                <h3>Team {teamTwo}</h3>
+            <table>
+                <th className="teams-table-title">Team {teamTwo}</th>
                 {b.length === 0 ? null : (
-                    <ul className="ul-list-names">
+                    <tr >
 
                         {b.map((footballer, index) => (
-                            <li className="li-list-names" key={index}>
+                            <td className="tr-list-teams" key={index}>
                                 <span style={{ color: footballer.color }}>{footballer.name}</span>
-                            </li>
+                            </td>
                         ))}
-                    </ul>
+                    </tr>
                 )}
-            </div>
+            </table>
         </>
     )
 

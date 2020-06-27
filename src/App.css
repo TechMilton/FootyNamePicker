@@ -141,9 +141,7 @@ body {
   border-radius: 50%;
 }
 
-/* Table Name List Stayling */
-
-
+/* Names Table Stayling */
 .remove-btn {
   color: rgb(0, 0, 0);
 }
@@ -157,10 +155,35 @@ body {
   padding: 0;
   max-width: 300px;
   margin: 10px;
-
 }
 
 .td-list-names {
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid #DDD;
+}
+
+
+/* Teams Table Styling */
+
+.teams-table {
+  flex-direction: row
+}
+
+.teams-table-title {
+  display: flex;
+  border-bottom: 2px solid lightgrey;
+}
+
+.tr-list-teams {
+  padding: 0;
+  max-width: 300px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.td-list-teams {
   display: flex;
   align-items: center;
   border-bottom: 2px solid #DDD;
