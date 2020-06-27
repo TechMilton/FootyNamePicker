@@ -5,7 +5,12 @@ const Reset = () => {
     const { state: dispatch } = useContext(AppContext);
 
     return (
-        <a href="/" onClick={() => dispatch({ type: "RESET", })}>Reset Game</a>
+        <a
+            href="/"
+            className="nav-links"
+            onClick={() => dispatch({ type: "RESET", })}>
+            Reset Game
+        </a>
     );
 }
 

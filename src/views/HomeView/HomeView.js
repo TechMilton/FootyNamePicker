@@ -13,7 +13,7 @@ import Reset from '../../components/reset/reset';
 const HomeView = () => (
     <>
         <div className="main-nav-bar">
-            <Link to={appUrls.SETTINGS}>Game Settings</Link>
+            <Link className="nav-links" to={appUrls.SETTINGS}>Game Settings</Link>
             <Reset />
         </div>
         <div className="page-container">
