@@ -97,7 +97,7 @@ body {
 }
 
 .color-blue.active {
-  border: 5px solid #ddd;
+  border: 5px solid black;
   width: 32px;
   height: 32px;
 }

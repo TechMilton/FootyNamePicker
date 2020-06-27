@@ -1,10 +1,12 @@
 import React, { useState, useContext } from "react";
+import { useHistory } from 'react-router-dom';
 import { AppContext } from "../../App";
 
 const Settings = () => {
 
     //initialize context (so that you can reach the data)
     const { dispatch } = useContext(AppContext);
+    const history = useHistory();
 
     const [teamOne, setTeamOne] = useState("");
     const [teamTwo, setTeamTwo] = useState("");
@@ -31,10 +33,12 @@ const Settings = () => {
         dispatch({ type: "TEAM_ONE", value: { teamOne } });
         dispatch({ type: "TEAM_TWO", value: { teamTwo } });
         dispatch({ type: "COUNT", value: { count } });
+        history.push("/");
     };
 
     return (
         <>
+
             <form onSubmit={handleSubmit}>
                 <label className="input-label">First Team Captain:</label>
                 <input

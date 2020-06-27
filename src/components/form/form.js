@@ -39,25 +39,25 @@ const Form = (props) => {
                     <li className="color-blue">
                         <input className="color-radio" type="radio" value="blue" name="color" required />
                     </li>
-                    <li className="color-red" name="color" value="red">
+                    <li className="color-red" >
                         <input className="color-radio" type="radio" value="red" name="color" required />
                     </li>
-                    <li className="color-green" name="color" value="green">
+                    <li className="color-green">
                         <input className="color-radio" type="radio" value="green" name="color" required />
                     </li>
-                    <li className="color-yellow" name="color" value="yellow">
+                    <li className="color-yellow">
                         <input className="color-radio" type="radio" value="yellow" name="color" required />
                     </li>
-                    <li className="color-purple" name="color" value="purple">
+                    <li className="color-purple">
                         <input className="color-radio" type="radio" value="purple" name="color" required />
                     </li>
-                    <li className="color-brown" name="color" value="brown">
+                    <li className="color-brown">
                         <input className="color-radio" type="radio" value="brown" name="color" required />
                     </li>
-                    <li className="color-orange" name="color" value="orange">
+                    <li className="color-orange">
                         <input className="color-radio" type="radio" value="orange" name="color" required />
                     </li>
-                    <li className="color-pink" name="color" value="pink">
+                    <li className="color-pink">
                         <input className="color-radio" type="radio" value="pink" name="color" required />
                     </li>
                 </ul>
