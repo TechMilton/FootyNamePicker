@@ -5,6 +5,7 @@ const Form = (props) => {
 
     //initialize context (so that you can reach the data)
     const { state: { count }, dispatch } = useContext(AppContext);
+    const { state: { names } } = useContext(AppContext);
 
     //keep track of input value
     const [input, setInput] = useState("");
@@ -28,6 +29,10 @@ const Form = (props) => {
         // Reset state after submit
         dispatch({ type: "SHUFFLE" });
     };
+
+    if (names.length >= count) {
+        return null;
+    }
 
     return (
         <>
