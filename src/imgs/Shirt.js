@@ -7,7 +7,7 @@ const SVG = ({
 }) => {
     return (
         <>
-            <svg className="footballer-shirt" id="Layer_1" fill={fill} enable-background="new 0 0 512 512" height={height} viewBox="0 0 512 512" width={width} xmlns="http://www.w3.org/2000/svg"><g><path d="m49.097 129.396h60.636v-125.373l-60.636 60.637z" />
+            <svg className="footballer-shirt" fill={fill} height={height} viewBox="0 0 512 512" width={width} xmlns="http://www.w3.org/2000/svg"><g><path d="m49.097 129.396h60.636v-125.373l-60.636 60.637z" />
                 <path d="m139.733 512h101.267v-93.84h30v93.84h101.267v-187.681h-232.534z" />
 
                 <path d="m256 58.779c19.204 0 34.827-15.624 34.827-34.828v-23.951h-69.655v23.952c0 19.204 15.624 34.827 34.828 34.827z" />
