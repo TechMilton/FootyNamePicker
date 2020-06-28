@@ -27,7 +27,13 @@ const App = () => {
 
   return (
     <AppContext.Provider value={value}>
-      <p>Hello World</p>
+      <Router>
+        <Switch>
+          <Route exact path={appUrls.HOME} component={HomeView} />
+          <Route path={appUrls.SETTINGS} component={SettingsView} />
+          <Route path={appUrls.TEAMS} component={TeamsView} />
+        </Switch>
+      </Router>
     </AppContext.Provider>
   );
 };
