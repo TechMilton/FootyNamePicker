@@ -15,7 +15,7 @@ const Button = () => {
         <>
             <div className="btn-teams">
                 <p className="input-label">Generate Teams</p>
-                <button className="btn-link" onClick={handleSubmit}>Generate Teams</button>
+                <button className="main-btn" onClick={handleSubmit}>Generate Teams</button>
             </div>
         </>
     )

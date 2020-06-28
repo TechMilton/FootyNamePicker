@@ -17,6 +17,7 @@ const TeamsView = () => (
         </div>
         <div className="page-container">
             <Header />
+            <Reset />
         </div>
         <div className="list-teams">
             <Teams />
