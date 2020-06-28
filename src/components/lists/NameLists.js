@@ -6,7 +6,9 @@ const NameList = () => {
 
     return (
         <table className="names-table">
-            <th className="names-table-title">Footballers:</th>
+            <tr>
+                <th className="names-table-title">Footballers:</th>
+            </tr>
             {names.length === 0 ? null : (
                 <tr className="tr-list-names">
                     {names.map((footballer, index) => (
