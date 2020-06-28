@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6607d5ea87aa59547e7f21f96d8dae94",
+    "revision": "d95cb44d5e9dfb1cc6681a9d4ac9d68d",
     "url": "/FootyNamePicker/index.html"
   },
   {
-    "revision": "217573cdfd456ffe2c57",
+    "revision": "3efcedf1516d0bb81452",
     "url": "/FootyNamePicker/static/css/main.7f59116c.chunk.css"
   },
   {
-    "revision": "3b7e8a1afe6b3ea256e0",
-    "url": "/FootyNamePicker/static/js/2.d3fd8371.chunk.js"
+    "revision": "b5ce871ecfa42810992a",
+    "url": "/FootyNamePicker/static/js/2.1255a151.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/FootyNamePicker/static/js/2.d3fd8371.chunk.js.LICENSE.txt"
+    "url": "/FootyNamePicker/static/js/2.1255a151.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "217573cdfd456ffe2c57",
-    "url": "/FootyNamePicker/static/js/main.caf725f9.chunk.js"
+    "revision": "3efcedf1516d0bb81452",
+    "url": "/FootyNamePicker/static/js/main.78b21acf.chunk.js"
   },
   {
     "revision": "d57b781f6c148371d6a9",
