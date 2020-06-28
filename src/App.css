@@ -26,7 +26,7 @@ body {
 
 @media only screen and (max-width: 375px) {
   .page-header__the {
-    font-size: 20px;
+    font-size: 22px;
   }
 }
 
@@ -46,7 +46,7 @@ body {
 
 @media only screen and (max-width: 375px) {
   .page-header__title {
-    font-size: 25px;
+    font-size: 32px;
   }
 }
 
@@ -213,7 +213,6 @@ body {
   transform: scale(1.2);
 }
 
-
 .color-brown {
   width: 20px;
   height: 20px;
@@ -301,6 +300,12 @@ body {
   flex-direction: column;
 }
 
+@media only screen and (max-width: 700px) {
+  .team-one-table {
+    padding-right: 0px;
+  }
+}
+
 
 .team-two-table {
   padding-left: 50px;
@@ -308,6 +313,12 @@ body {
   text-align: center;
   display: flex;
   flex-direction: column;
+}
+
+@media only screen and (max-width: 700px) {
+  .team-two-table {
+    padding-right: 0px;
+  }
 }
 
 .list-teams {
@@ -323,9 +334,37 @@ body {
   font-size: 1.5rem
 }
 
+@media only screen and (max-width: 700px) {
+  .teams-table-title {
+    padding-right: 1.0rem;
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .teams-table-title {
+    padding-right: 1.0rem;
+    font-size: 0.9rem;
+  }
+}
+
 .footballer-name {
   font-size: 1.2rem;
 }
+
+@media only screen and (max-width: 700px) {
+  .footballer-name {
+    font-size: 1.0rem;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .footballer-name {
+    font-size: 0.8rem;
+  }
+}
+
+
 
 .footballer-shirt {
   margin: 10px 0px 50px 0px;
@@ -338,6 +377,7 @@ body {
   display: flex;
   flex-direction: column;
   text-align: center;
+  align-items: center;
 }
 
 .td-list-teams {
