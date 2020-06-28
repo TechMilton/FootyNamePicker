@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1d02289598a804e62f42c4a8042c7c65",
+    "revision": "17ed8579465b5b05943702ee45f8f3a8",
     "url": "/FootyNamePicker/index.html"
   },
   {
-    "revision": "6267cdec49bd8314bc93",
+    "revision": "01da63a3e3e57b1a3ace",
     "url": "/FootyNamePicker/static/css/main.7f59116c.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/FootyNamePicker/static/js/2.d3fd8371.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "6267cdec49bd8314bc93",
-    "url": "/FootyNamePicker/static/js/main.dd0e3344.chunk.js"
+    "revision": "01da63a3e3e57b1a3ace",
+    "url": "/FootyNamePicker/static/js/main.ba585dba.chunk.js"
   },
   {
     "revision": "d57b781f6c148371d6a9",

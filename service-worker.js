@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/FootyNamePicker/precache-manifest.fb7c9df29f139853edb3b1c5e71803df.js"
+  "/FootyNamePicker/precache-manifest.d0934441f5f2b6bb1703226a7f6601e6.js"
 );
 
 self.addEventListener('message', (event) => {
