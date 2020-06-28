@@ -19,7 +19,6 @@ const Teams = () => {
         return null;
     }
 
-
     return (
         <>
             <table className="team-one-table">

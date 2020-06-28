@@ -19,7 +19,7 @@ export const addTeamOne = (state, { value }) => {
     };
 }
 
-//Add Team Two Name -- Settings Page
+//Add Team Two Name - Settings Page
 export const addTeamTwo = (state, { value }) => {
     return {
         ...state,
@@ -27,7 +27,7 @@ export const addTeamTwo = (state, { value }) => {
     };
 }
 
-//Add player counter -- Settings Page
+//Add player counter - Settings Page
 export const addCount = (state, { value }) => {
     return {
         ...state,
@@ -40,7 +40,7 @@ export const shuffleTeam = (state) => {
     const teamOneNames = [];
     const teamTwoNames = [];
 
-    //(Math.random() <= 0.5)
+    //Loops over each name and splits them into two lists depending if they are divisible by 2
 
     for (let i = 0; i < names.length; i++) {
         if (i % 2 === 0) {

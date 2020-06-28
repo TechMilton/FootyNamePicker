@@ -364,8 +364,6 @@ body {
   }
 }
 
-
-
 .footballer-shirt {
   margin: 10px 0px 50px 0px;
 }
@@ -413,11 +411,9 @@ body {
 .counter-display {
   font-size: large;
   font-weight: bold;
-  color: black;
 }
 
 .counter-btn {
-  position: relative;
   height: 30px;
   width: 30px;
   margin: 0px 5px;
@@ -425,7 +421,6 @@ body {
   border: none;
   border-radius: 5px;
   font-size: 20px;
-  overflow: hidden;
   background-color: #333;
 }
 
