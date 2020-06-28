@@ -1,0 +1,2 @@
+(this["webpackJsonpfooty-team-picker"]=this["webpackJsonpfooty-team-picker"]||[]).push([[0],{21:function(e,n,t){e.exports=t(32)},26:function(e,n,t){},32:function(e,n,t){"use strict";t.r(n);var o=t(0),r=t.n(o),c=t(18),i=t.n(c);t(8),t(6),t(1),t(26),t(20),t(5),r.a.createContext({});console.log("index.js is running"),i.a.render(r.a.createElement("p",null,"Hello World"),document.getElementById("root"))}},[[21,1,2]]]);
+//# sourceMappingURL=main.28709266.chunk.js.map
