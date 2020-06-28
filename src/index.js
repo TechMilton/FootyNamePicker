@@ -4,6 +4,7 @@ import App from './App';
 
 import { HashRouter as Router } from 'react-router-dom';
 
+console.log('index.js is running')
 ReactDOM.render(
   <Router>
     <App />

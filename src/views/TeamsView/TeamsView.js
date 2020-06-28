@@ -1,9 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import Header from '../../components/header/Header';
 import { appUrls } from '../../urls';
-
+import Header from '../../components/header/Header';
 import Teams from '../../components/lists/Teams';
 import Reset from '../../components/reset/reset';
 
