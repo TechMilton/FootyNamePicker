@@ -1,7 +1,6 @@
 import React from 'react';
 
 const Header = () => {
-
     return (
         <>
             <h2 className="page-header__the">The</h2>

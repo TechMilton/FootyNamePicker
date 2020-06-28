@@ -31,15 +31,17 @@ const Form = (props) => {
         dispatch({ type: "SHUFFLE" });
     };
 
+    // If the name list is greater than or equal to count return the reset button
     if (names.length >= count) {
         return <Button />
     };
 
-
     return (
         <>
             <p className="input-label">Players Name:</p>
+
             <p className="form-info">After <i style={{ fontWeight: "bold" }}>{count} names</i>, your teams will be randomly be generated</p>
+
             <form onSubmit={handleSubmit}>
                 <input className="name-input" onChange={handleInput} value={input} required />
                 <p className="input-label">Players Color:</p>
@@ -69,7 +71,6 @@ const Form = (props) => {
                         <input className="color-radio" type="radio" value="pink" name="color" required />
                     </li>
                 </ul>
-
                 <button className="main-btn" type="submit">Add</button>
             </form>
         </>

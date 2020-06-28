@@ -2,6 +2,8 @@ import React, { useContext } from "react";
 import { AppContext } from "../../App";
 
 const NameList = () => {
+
+    //initialize context so that you can reach the data
     const { state: { names }, dispatch } = useContext(AppContext);
 
     return (

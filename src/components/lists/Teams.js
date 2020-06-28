@@ -5,6 +5,7 @@ import SVG from "../../imgs/Shirt";
 
 const Teams = () => {
 
+    //initialize context so that you can reach the data
     const { state: { names } } = useContext(AppContext);
 
     const { state: { teamOne } } = useContext(AppContext);

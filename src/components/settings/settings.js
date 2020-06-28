@@ -4,7 +4,7 @@ import { AppContext } from "../../App";
 
 const Settings = () => {
 
-    //initialize context (so that you can reach the data)
+    //initialize context so that you can reach the data
     const { dispatch } = useContext(AppContext);
     const history = useHistory();
 
@@ -59,9 +59,21 @@ const Settings = () => {
                 <div className="counter">
                     <label className="input-label">Number of Players:</label>
                     <p className="counter-display" onChange={handleCount}>{count} Players</p>
-                    <button className="counter-btn" type="button" disabled={count > 9} onClick={() => setCount(count + 1)} >+</button>
-                    <button className="counter-btn" type="button" disabled={count < 5} onClick={() => setCount(count - 1)} >-</button>
+
+                    <button
+                        className="counter-btn"
+                        type="button"
+                        disabled={count > 9}
+                        onClick={() => setCount(count + 1)} >+</button>
+
+                    <button
+                        className="counter-btn"
+                        type="button"
+                        disabled={count < 5}
+                        onClick={() => setCount(count - 1)} >-</button>
+
                 </div>
+
                 <label className="input-label">Submit</label>
                 <button type="submit" className="settings-btn">Start</button>
             </form>

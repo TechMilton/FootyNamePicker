@@ -1,13 +1,12 @@
 import React from "react";
 import { useHistory } from 'react-router-dom';
 
-
 const Button = () => {
 
     const history = useHistory();
 
     const handleSubmit = (e) => {
-        //prevents the page from refreshing on submit
+        //redirects user to /teams page
         history.push("/teams");
     };
 
