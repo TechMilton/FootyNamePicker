@@ -40,8 +40,10 @@ export const shuffleTeam = (state) => {
     const teamOneNames = [];
     const teamTwoNames = [];
 
+    //(Math.random() <= 0.5)
+
     for (let i = 0; i < names.length; i++) {
-        if (Math.random() <= 0.5) {
+        if (i % 2 === 0) {
             teamOneNames.push(names[i]);
         } else {
             teamTwoNames.push(names[i]);

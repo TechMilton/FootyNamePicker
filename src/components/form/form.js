@@ -39,7 +39,7 @@ const Form = (props) => {
     return (
         <>
             <p className="input-label">Players Name:</p>
-            <p>After <i style={{ fontWeight: "bold" }}>{count} names</i>, your teams will be randomly be generated</p>
+            <p className="form-info">After <i style={{ fontWeight: "bold" }}>{count} names</i>, your teams will be randomly be generated</p>
             <form onSubmit={handleSubmit}>
                 <input className="name-input" onChange={handleInput} value={input} required />
                 <p className="input-label">Players Color:</p>

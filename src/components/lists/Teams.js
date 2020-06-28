@@ -22,13 +22,13 @@ const Teams = () => {
 
     return (
         <>
-            <table className="teams-table">
+            <table className="team-one-table">
                 <th className="teams-table-title">Team {teamOne}</th>
                 {teamOneNames.length === 0 ? null : (
                     <tr >
                         {teamOneNames.map((footballer, index) => (
                             <td className="tr-list-teams" key={index}>
-                                <span>{footballer.name}</span>
+                                <span className="footballer-name">{footballer.name}</span>
                                 <SVG fill={footballer.color} />
                             </td>
                         ))}
@@ -36,14 +36,14 @@ const Teams = () => {
                 )}
             </table>
 
-            <table>
+            <table className="team-two-table">
                 <th className="teams-table-title">Team {teamTwo}</th>
                 {teamTwoNames.length === 0 ? null : (
                     <tr >
                         {teamTwoNames.map((footballer, index) => (
                             <td className="tr-list-teams" key={index}>
-                                <span>{footballer.name}</span>
-                                <SVG className="football-shirt" fill={footballer.color} />
+                                <span className="footballer-name">{footballer.name}</span>
+                                <SVG fill={footballer.color} />
                             </td>
                         ))}
                     </tr>
