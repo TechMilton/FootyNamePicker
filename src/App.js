@@ -29,7 +29,7 @@ const App = () => {
     <AppContext.Provider value={value}>
       <Router>
         <Switch>
-          <Route exact path={appUrls.HOME} component={HomeView} />
+          <Route path={appUrls.HOME} component={HomeView} />
           <Route path={appUrls.SETTINGS} component={SettingsView} />
           <Route path={appUrls.TEAMS} component={TeamsView} />
         </Switch>
