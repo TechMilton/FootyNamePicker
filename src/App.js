@@ -2,9 +2,9 @@ import React, { useReducer } from 'react';
 
 // import the ReactRouter components
 import {
-  BrowserRouter as Router,
   Route,
   Switch,
+  HashRouter
 } from "react-router-dom";
 
 import './App.css';
@@ -27,13 +27,13 @@ const App = () => {
 
   return (
     <AppContext.Provider value={value}>
-      <Router basename="/">
+      <HashRouter basename="/">
         <Switch>
           <Route exact path={appUrls.HOME} component={HomeView} />
           <Route path={appUrls.SETTINGS} component={SettingsView} />
           <Route path={appUrls.TEAMS} component={TeamsView} />
         </Switch>
-      </Router>
+      </HashRouter>
     </AppContext.Provider >
   );
 };
