@@ -3,11 +3,6 @@ import { AppContext } from "../../App";
 
 const NameList = () => {
     const { state: { names }, dispatch } = useContext(AppContext);
-    const { state: { count } } = useContext(AppContext);
-
-    if (names.length >= count) {
-        return null;
-    }
 
     return (
         <table className="names-table">

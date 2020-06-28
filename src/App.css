@@ -315,3 +315,11 @@ body {
   color: black;
   font-size: 1rem;
 }
+
+.btn-link {
+  font-size: 1em;
+  font-weight: bold;
+  background: rgb(44, 206, 159);
+  padding: 1em 1em;
+  border-radius: 8px;
+}
