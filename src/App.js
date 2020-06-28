@@ -27,14 +27,14 @@ const App = () => {
 
   return (
     <AppContext.Provider value={value}>
-      <Router>
+      <Router basename="/">
         <Switch>
-          <Route path={appUrls.HOME} component={HomeView} />
+          <Route exact path={appUrls.HOME} component={HomeView} />
           <Route path={appUrls.SETTINGS} component={SettingsView} />
           <Route path={appUrls.TEAMS} component={TeamsView} />
         </Switch>
       </Router>
-    </AppContext.Provider>
+    </AppContext.Provider >
   );
 };
 
