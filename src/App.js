@@ -11,6 +11,7 @@ import './App.css';
 
 import HomeView from './views/HomeView/HomeView';
 import SettingsView from './views/SettingsView/SettingsView';
+import TeamsView from './views/TeamsView/TeamsView';
 import reducer from './store/reducer';
 import initialState from './store/initialState';
 
@@ -30,6 +31,7 @@ const App = () => {
         <Switch>
           <Route exact path={appUrls.HOME} component={HomeView} />
           <Route path={appUrls.SETTINGS} component={SettingsView} />
+          <Route path={appUrls.TEAMS} component={TeamsView} />
         </Switch>
       </Router>
     </AppContext.Provider>

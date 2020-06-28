@@ -1,4 +1,5 @@
 export const appUrls = {
     HOME: '/',
-    SETTINGS: '/settings'
+    SETTINGS: '/settings',
+    TEAMS: '/teams',
 };

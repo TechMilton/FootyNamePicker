@@ -1,5 +1,6 @@
 import React, { useState, useContext } from "react";
 import { AppContext } from "../../App";
+import Button from "./Button";
 
 const Form = (props) => {
 
@@ -31,8 +32,9 @@ const Form = (props) => {
     };
 
     if (names.length >= count) {
-        return null;
-    }
+        return <Button />
+    };
+
 
     return (
         <>
