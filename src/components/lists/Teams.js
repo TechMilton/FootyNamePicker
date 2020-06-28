@@ -22,31 +22,43 @@ const Teams = () => {
     return (
         <>
             <table className="team-one-table">
-                <th className="teams-table-title">Team {teamOne}</th>
-                {teamOneNames.length === 0 ? null : (
-                    <tr >
-                        {teamOneNames.map((footballer, index) => (
-                            <td className="tr-list-teams" key={index}>
-                                <span className="footballer-name">{footballer.name}</span>
-                                <SVG fill={footballer.color} />
-                            </td>
-                        ))}
+                <thead>
+                    <tr>
+                        <th className="teams-table-title">Team {teamOne}</th>
                     </tr>
-                )}
+                </thead>
+                <tbody>
+                    {teamOneNames.length === 0 ? null : (
+                        <tr >
+                            {teamOneNames.map((footballer, index) => (
+                                <td className="tr-list-teams" key={index}>
+                                    <span className="footballer-name">{footballer.name}</span>
+                                    <SVG fill={footballer.color} />
+                                </td>
+                            ))}
+                        </tr>
+                    )}
+                </tbody>
             </table>
 
             <table className="team-two-table">
-                <th className="teams-table-title">Team {teamTwo}</th>
-                {teamTwoNames.length === 0 ? null : (
-                    <tr >
-                        {teamTwoNames.map((footballer, index) => (
-                            <td className="tr-list-teams" key={index}>
-                                <span className="footballer-name">{footballer.name}</span>
-                                <SVG fill={footballer.color} />
-                            </td>
-                        ))}
+                <thead>
+                    <tr>
+                        <th className="teams-table-title">Team {teamTwo}</th>
                     </tr>
-                )}
+                </thead>
+                <tbody>
+                    {teamTwoNames.length === 0 ? null : (
+                        <tr >
+                            {teamTwoNames.map((footballer, index) => (
+                                <td className="tr-list-teams" key={index}>
+                                    <span className="footballer-name">{footballer.name}</span>
+                                    <SVG fill={footballer.color} />
+                                </td>
+                            ))}
+                        </tr>
+                    )}
+                </tbody>
             </table>
         </>
     )
